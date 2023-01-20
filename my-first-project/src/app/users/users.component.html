@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+<div class="container mt-3">
+  <h1 class="heading">All User</h1>
+  <hr />
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">SNO</th>
+        <th scope="col">Name</th>
+        <th scope="col">Email</th>
+        <th scope="col">UserId</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let users of users; let i = index">
+        <td>{{ i + 1 }}</td>
+        <td>{{ users.Name }}</td>
+        <td>{{ users.email }}</td>
+        <td>{{ users.userId }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
