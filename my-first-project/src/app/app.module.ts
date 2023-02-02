@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import {HttpClientModule} from '@angular/common/http'
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field'
 import {MatInputModule} from '@angular/material/input'
@@ -18,6 +18,15 @@ import { UsersComponent } from './users/users.component';
 import { ApiServiceService } from './api-service.service';
 import { EmployeeComponent } from './employee/employee.component';
 import { HomeComponent } from './home/home.component';
+import { RegisteremployeeComponent } from './registeremployee/registeremployee.component';
+import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
+import { InfoComponent } from './info/info.component';
+import { UpdateuserComponent } from './updateuser/updateuser.component';
+import { RegisterfamilyinfoComponent } from './registerfamilyinfo/registerfamilyinfo.component';
+import { AlldetailuserComponent } from './alldetailuser/alldetailuser.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomebodyComponent } from './homebody/homebody.component';
+import { HomeheaderComponent } from './homeheader/homeheader.component';
 
 // all packages import here 
 @NgModule({
@@ -28,7 +37,17 @@ import { HomeComponent } from './home/home.component';
     NavbarComponent,
     UsersComponent,
     EmployeeComponent,
-    HomeComponent
+    HomeComponent,
+    RegisteremployeeComponent,
+    UpdateEmployeeComponent,
+    InfoComponent,
+    UpdateuserComponent,
+    RegisterfamilyinfoComponent,
+    AlldetailuserComponent,
+    FooterComponent,
+    HomebodyComponent,
+    HomeheaderComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -40,6 +59,7 @@ import { HomeComponent } from './home/home.component';
     MatFormFieldModule,
     MatButtonModule,
     MatCardModule,
+    FormsModule
   
 
   ],

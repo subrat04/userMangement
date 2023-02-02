@@ -4,8 +4,16 @@ import { EmployeeComponent } from './employee/employee.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { RegisteremployeeComponent } from './registeremployee/registeremployee.component';
 import { SignupComponent } from './signup/signup.component';
+import { UpdateEmployeeComponent } from './update-employee/update-employee.component';
 import { UsersComponent } from './users/users.component';
+import { InfoComponent } from './info/info.component';
+import { UpdateuserComponent } from './updateuser/updateuser.component';
+import { AuthguardGuard } from './authguard.guard';
+import { RegisterfamilyinfoComponent } from './registerfamilyinfo/registerfamilyinfo.component';
+import { AlldetailuserComponent } from './alldetailuser/alldetailuser.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -16,7 +24,7 @@ const routes: Routes = [
 // },
 
 {
-  path:"",component:LoginComponent
+  path:"",component:LoginComponent , 
 },
 {
   path:"signup",component:SignupComponent
@@ -25,13 +33,34 @@ const routes: Routes = [
   path:"navbar",component:NavbarComponent
 },
 {
-  path:"users",component:UsersComponent
+  path:"users",canActivate:[AuthguardGuard] ,component:UsersComponent
 },
 {
-  path:"employee",component:EmployeeComponent
+  path:"updateUser/:id",canActivate:[AuthguardGuard],component:UpdateuserComponent 
 },
 {
-  path:"home",component:HomeComponent
+  path:"registeruserInfo/:id",component:RegisterfamilyinfoComponent
+},
+{
+ path:"allDetail/:id",component:AlldetailuserComponent
+},
+{
+  path:"employee",canActivate:[AuthguardGuard],component:EmployeeComponent 
+},
+{
+  path:"home",canActivate:[AuthguardGuard],component:HomeComponent 
+},
+{
+  path:"registerEmployee",canActivate:[AuthguardGuard],component:RegisteremployeeComponent
+},
+{
+  path:"updateEmployee/:id",canActivate:[AuthguardGuard],component:UpdateEmployeeComponent
+},
+{
+  path:"help",canActivate:[AuthguardGuard],component:InfoComponent
+},
+{
+  path:"footer",component:FooterComponent
 }
 ];
 

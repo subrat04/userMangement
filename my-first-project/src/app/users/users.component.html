@@ -5,18 +5,25 @@
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th scope="col">SNO</th>
-        <th scope="col">Name</th>
-        <th scope="col">Email</th>
-        <th scope="col">UserId</th>
+        <th scope="col" class="text-center">S.no</th>
+        <th scope="col"  class="text-center">Name</th>
+        <th scope="col"  class="text-center">Email</th>
+        <th scope="col"  class="text-center">UserId</th>
+        <th scope="col"   class="text-center">Family Info</th>
+        <th scope="col"  class="text-center">All Detail</th>
+        <th scope="col"  class="text-center">Action</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let users of users; let i = index">
-        <td>{{ i + 1 }}</td>
+      <tr *ngFor="let users of users; let i = index"  class="text-center">
+        <td >{{ i + 1 }}</td>
         <td>{{ users.Name }}</td>
         <td>{{ users.email }}</td>
         <td>{{ users.userId }}</td>
+        <td><button class="btn btn-primary" (click)="createuser(users._id)">Add Info</button></td>
+        <td><button class="btn btn-primary" (click)="getuserinfo(users._id)">Details</button></td>
+        <td><button class="btn btn-primary" (click)="redirect(users._id)">Update</button> 
+          <button class="btn btn-danger ms-2"  (click)="deleteusers(users._id)" *ngIf="level==1">Delete</button></td>
       </tr>
     </tbody>
   </table>

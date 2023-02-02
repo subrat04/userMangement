@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+<div class="container mt-2 pt-5 ">
+    <div class="row">
+      <div class="col-md-4 offset-md-4 border border-2 rounded shadow p-5">
+        <form  [formGroup]="addfamilyinfo" (ngSubmit)="registerFamily()">
+          <h1>Family Info Register</h1>
+          <div class="mb-3">
+            <label class="form-label">Father Name</label>
+            <input type="text" class="form-control"   autocomplete="off" formControlName="fatherName" placeholder="Enter Father Name" required >
+            <div class="error" *ngIf="submitted && f.fatherName.errors">
+              <div class="text-danger" *ngIf="f.fatherName.errors['required']">Father Name is required</div>
+             
+          </div>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Mother Name</label>
+            <input type="text" class="form-control"   autocomplete="off" formControlName="motherName" placeholder="Enter Mother Name" required>
+            <div class="error" *ngIf="submitted && f.motherName.errors">
+              <div class="text-danger" *ngIf="f.motherName.errors['required']">Mother Name is required</div>
+          </div>
+        </div>
+            
+            <div class="mb-3">
+              <label  class="form-label">Permanent Address</label>
+              <input type="text"   class="form-control" formControlName="permanentAddress" autocomplete="off" placeholder="Enter Permanent Address" required >
+              <div class="error"  *ngIf="submitted && f.permanentAddress.errors">
+                <div class="text-danger" *ngIf="f.permanentAddress.errors['required']">Permanent Address is required</div>
+            </div>
+            </div>
+
+
+          <div class="mb-4">
+            <label class="form-label">Marital Status</label><br>
+          <input type="radio" name="maritalStatus" (click)="onRadioChange($event.target)" value="married" > Married
+          <input type="radio" name="maritalStatus" (click)="onRadioChange($event.target)" value="unmarried" checked> UnMarried
+        
+        </div>
+
+          <div class="mb-3" *ngIf="spouse">
+            <label  class="form-label">Spouse Name</label>
+            <input type="text" class="form-control" formControlName="spouseName"  autocomplete="off" placeholder="Enter Spouse Name" required >
+            <div class="error" *ngIf="submitted  &&f.spouseName.errors">
+              <div class="text-danger" *ngIf="f.spouseName.errors['required']">spouse Name is required</div>
+          </div>
+          </div>
+         <div>
+          <button type="submit" class="btn btn-primary" >Register</button>
+        </div>
+        </form>
+      </div>
+    </div>
+  </div>
+<!-- <div>{{sampleForm.value|json}}</div> -->

@@ -1,0 +1,32 @@
+.footer_main{
+    height: 175px;
+    border-radius: 15px;
+   
+}
+.section1{
+    padding-bottom: 4rem;
+}
+.footer_heading1{
+    font-size: 35px;
+    color: white;
+    text-align:inherit;
+}
+.footer_heading2{
+    font-size: 15px;
+    color: #dfe6ef;
+    text-align:inherit;
+    font-family:Arial, Helvetica, sans-serif;
+    /* margin-top: 21px; */
+}
+.Contact_btn{ 
+    height: 65px;
+    width: 150px;
+    font-size: 18px;
+}
+.margin_btn{
+    margin-top:5%;
+}
+.Contact_btn:hover{
+    background-color: black;
+    color: white;
+}

@@ -1,5 +1,5 @@
 import { Component,OnInit } from '@angular/core';
-import {FormGroup,FormControl} from '@angular/forms'
+import {FormGroup,FormControl, Validators} from '@angular/forms'
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 import { ApiServiceService } from '../api-service.service';
@@ -9,37 +9,48 @@ import { ApiServiceService } from '../api-service.service';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit{
-  adduser= new FormGroup({
-    Name:new FormControl(''),
-    email:new FormControl(''),
-    userId:new FormControl(''),
-    password:new FormControl('')
-  })
-
+  submitted:boolean = false;
+  errormsg: any;
+  userForm : FormGroup | undefined
+  showPassword:boolean=false
+  password:any
   constructor(private user:ApiServiceService,private router:Router) {}
+  
+  adduser= new FormGroup({
+    Name:new FormControl('',[Validators.required]),
+    email:new FormControl('',[Validators.required,Validators.email]),
+    userId:new FormControl('',[Validators.required]),
+    password:new FormControl('',[Validators.required])
+  })
+  
+ get f() {return this.adduser.controls;}
+
   
   ngOnInit(): void {
    
   }
   registerUser(){
       console.log(this.adduser.value)
+    this.submitted = true;
+    if(this.adduser.invalid) {
+      this.errormsg = 'all fields required'
+    }
     this.user.addUser(this.adduser.value).subscribe((res)=>{
       //alert section 
       if(res) {
         Swal.fire({
-          title:'registered alert',
-          text:'user registered successfully',
+          title:'Registered Alert',
+          text:'User Registered Successfully',
           timer:1500
         })
       }
-
-    })
     this.router.navigate([''])
+     
+    })
+    // this.router.navigate([''])
   }
   redirect() {
     this.router.navigate([''])
   }
-  handleregister(){
-     return alert("user login successfully")
-  }
+  
 }

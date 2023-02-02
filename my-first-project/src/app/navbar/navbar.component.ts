@@ -7,12 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  level: any;
   constructor(private router:Router){}
   ngOnInit(): void {
-    
+   this.level = localStorage.getItem('level')
   }
   logout(){
     localStorage.removeItem("token")
+    localStorage.removeItem("userId")
+    localStorage.removeItem("level")
     this.router.navigate([""])
   }
 

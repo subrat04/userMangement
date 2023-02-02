@@ -3,20 +3,19 @@
     <h1 class="heading">All Employee</h1> <hr>
     <table class="table table-bordered">
         <thead>
-           
           <tr>
-            <th scope="col" >SNO</th>
-            
-            <th scope="col" >firstName</th>
-            <th scope="col">lastName</th>
-            <th scope="col">email</th>
-            <th scope="col">phone</th>
-            <th scope="col">address</th>
-            <th scope="col">location</th>
+            <th scope="col"  class="text-center" >S.no</th>
+            <th scope="col"  class="text-center" >First Name</th>
+            <th scope="col"  class="text-center">Last Name</th>
+            <th scope="col"  class="text-center">Email</th>
+            <th scope="col"  class="text-center">Phone</th>
+            <th scope="col"  class="text-center">Address</th>
+            <th scope="col"  class="text-center">Location</th>
+            <th scope="col"  class="text-center">Action</th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let employee of employee;let i=index">
+          <tr *ngFor="let employee of employee;let i=index"  class="text-center">
             <td>{{i+1}}</td>
             <td>{{employee.firstName}}</td>
             <td>{{employee.lastName}}</td>
@@ -24,6 +23,9 @@
             <td>{{employee.phone}}</td>
             <td>{{employee.address}}</td>
             <td>{{employee.location}}</td>
+            <td><button class="btn btn-primary" (click)="redirect(employee._id)">Update</button> 
+              <button class="btn btn-danger ms-1" (click)="deleteEmployee(employee._id)" *ngIf="level==1">Delete</button></td>
+            <td></td>
           </tr>
         </tbody>
       </table>

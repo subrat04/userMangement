@@ -1,0 +1,133 @@
+<app-navbar></app-navbar>
+
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card">
+          <div class="card-header text-center" style="background-color: cornflowerblue; color: aliceblue; font-size: 25px;">
+            All Details
+          </div>
+          <div class="card-body"  >
+            <ul class="list-group list-group-flush" *ngFor="let users of users" >
+              <div class="row d-flex justify-content-around align-items-center">
+                <div class="col-md-5 mt-3">
+                  <label>Name:</label>
+                </div>
+                <div class="col-md-5 mt-3">
+                  <li class="list-group-item group">{{users.userId.Name}}</li>
+                </div>
+              </div>
+
+              <div class="row d-flex justify-content-around align-items-center">
+                <div class="col-md-5 mt-3">
+                  <label>Email:</label>
+                </div>
+                <div class="col-md-5 mt-3">
+                  <li class="list-group-item group">{{users.userId.email}}</li>
+                </div>
+              </div>
+
+              <div class="row d-flex justify-content-around align-items-center">
+                <div class="col-md-5 mt-3">
+                  <label>UserId:</label>
+                </div>
+                <div class="col-md-5 mt-3">
+                  <li class="list-group-item group">{{users.userId.userId}}</li>
+                </div>
+              </div>
+
+              <div class="row d-flex justify-content-around align-items-center">
+                <div class="col-md-5 mt-3">
+                  <label>Father Name:</label>
+                </div>
+                <div class="col-md-5 mt-3">
+                  <li class="list-group-item group">{{users.fatherName}}</li>
+                </div>
+              </div>
+
+              <div class="row d-flex justify-content-around align-items-center">
+                <div class="col-md-5 mt-3">
+                  <label>Mother Name:</label>
+                </div>
+                <div class="col-md-5 mt-3">
+                  <li class="list-group-item group">{{users.motherName}}</li>
+                </div>
+              </div>
+
+              <div class="row d-flex justify-content-around align-items-center">
+                <div class="col-md-5 mt-3">
+                  <label>Permanent Addres:</label>
+                </div>
+                <div class="col-md-5 mt-3">
+                  <li class="list-group-item group">{{users.permanentAddress}}</li>
+                </div>
+              </div>
+
+              <div class="row d-flex justify-content-around align-items-center">
+                <div class="col-md-5 mt-3">
+                  <label>Marital Status:</label>
+                </div>
+                <div class="col-md-5 mt-3">
+                  <li class="list-group-item group">{{users.maritalStatus}}</li>
+                </div>
+              </div>
+
+              <div class="row d-flex justify-content-around align-items-center" *ngIf="users.spouseName!=''">
+                <div class="col-md-5 mt-3">
+                  <label>Spouse Name:</label>
+                </div>
+                <div class="col-md-5 mt-3">
+                  <li class="list-group-item group">{{users.spouseName}}</li>
+                </div>
+              </div>
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="col-md-6 mt-3 group ms-5 ps-5">
+    
+  </div>
+  <div class="col-md-6 mt-3 group">
+    
+  </div>
+  <div class="col-md-6 mt-3 group ms-5 ps-5">
+    <label>:</label>
+  </div>
+  <div class="col-md-6 mt-3 group">
+    <li class="list-group-item group">{{users.userId.}}</li>
+  </div>
+  <div class="col-md-6 mt-3 group ms-5 ps-5">
+    <label>Father Name:</label>
+  </div>
+  <div class="col-md-6 mt-3 group">
+    <li class="list-group-item group">{{users.fatherName}}</li>
+  </div>
+  <div class="col-md-6 mt-3 group ms-5 ps-5">
+    <label>Mother Name:</label>
+  </div>
+  <div class="col-md-6 mt-3 group">
+    <li class="list-group-item group">{{users.motherName}}</li>
+  </div>
+  <div class="col-md-6 mt-3 group ms-5 ps-5">
+    <label>Permanent Address: </label>
+  </div>
+  <div class="col-md-6 mt-3 group">
+    <li class="list-group-item group">{{users.permanentAddress}}</li>
+  </div>
+  <div class="col-md-6 mt-3 group ms-5 ps-5">
+    <label>Marital Status:</label>
+  </div>
+  <div class="col-md-6 mt-3 group">
+    <li class="list-group-item group">{{users.maritalStatus}}</li>
+  </div>
+  <div class="col-md-6 mt-3 group ms-5 ps-5">
+    <label>spouse Name: </label>
+  </div>
+  <div class="col-md-6 mt-3 group">
+    <li class="list-group-item group" *ngIf="users.spouseName!==''">{{users.spouseName}}</li>
+  </div> -->
