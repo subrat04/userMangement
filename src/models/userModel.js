@@ -19,9 +19,13 @@ const userSchema=new mongoose.Schema({
         type:String,
         required:true
     },
+    slag:{
+        type:String,
+        required:true
+    },
     level:{
         type:Number
     }
-},{timestamps:true})
+},{timestamps:true},{strictPopulate: false})
 
 module.exports=new mongoose.model("User",userSchema)

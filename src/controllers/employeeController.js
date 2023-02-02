@@ -1,49 +1,56 @@
 const userModel = require("../models/userModel.js");
 const employeeModel = require("../models/employeeModel.js");
-// const jwt=
 
 const createEmployee = async (req, res) => {
-  //   const userId = req.params.userid;
+try {
   let requestbody = req.body;
-  // if(!finduser) return res.status(404).send({message:"user is not foun
   let { email, phone, userId } = requestbody;
   const finduser = await userModel.findById({ _id: userId });
   console.log(finduser.level);
-  if (!finduser) return res.status(404).send({ msg: "user is not found" });
+  if (!finduser) return res.status(404).send({ msg: "User Not Found" });
   let findMail = await employeeModel.findOne({ email: email });
   if (findMail) {
     return res
       .status(400)
-      .send({ status: false, message: "email is already exist" });
+      .send({ status: false, message: "Email Already Exist" });
   }
   let findPhone = await employeeModel.findOne({ phone: phone });
   if (findPhone) {
     return res
       .status(400)
-      .send({ status: false, message: "phone already exist" });
+      .send({ status: false, message: "Phone Already Exist" });
   }
   if (finduser.level === 1) {
     let addemployee = await employeeModel.create(requestbody);
     return res.status(201).send({
       status: true,
-      message: "user create successfully",
+      message: "User Create Successfully",
       data: addemployee,
     });
   } else if (finduser.level === 2) {
     return res.status(401).send({
       status: true,
-      message: "not authorised",
+      message: "Not Authorised",
     });
   }
+} catch (error) {
+  return res.status(500).send({status:false,message:error.message})
+}
+ 
 };
 
 const getEmployee = async function (req, res) {
-  const query = req.query;
+  try {
+    const query = req.query;
   let findemployee = await employeeModel.find(query);
 
   return res
     .status(200)
-    .send({ staus: false, msg: "employee list", data: findemployee });
+    .send({ staus: true, msg: "Employee List", data: findemployee });
+  } catch (error) {
+    return res.status(500).send({status:false,message:error.message})
+  }
+  
 };
 
 const updateEmployee = async function (req, res) {
@@ -52,8 +59,8 @@ const updateEmployee = async function (req, res) {
   const findemployee = await employeeModel.findById(employeeId);
   if (!findemployee)
     return res
-      .status(400)
-      .send({ sttaus: false, msg: "employee is not found" });
+      .status(404)
+      .send({ sttaus: false, msg: "Employee not Found" });
 
   const updateemployee = await employeeModel.findByIdAndUpdate(
     { _id: employeeId },
@@ -62,20 +69,8 @@ const updateEmployee = async function (req, res) {
   );
   return res
     .status(200)
-    .send({ status: true, msg: "employee is updated", data: updateemployee });
+    .send({ status: true, msg: "Employee  Update Successfully", data: updateemployee });
 };
-
-// const deleteEmployee=async function(req,res){
-
-//   let employeeid=req.params.id
-//   const findemployee=await employeeModel.findById(employeeid)
-//   if(!findemployee) return res.status(400).send({status:false,message:"employee is not found"})
-//   // if(req.userId !==findemployee.userId)return res.status(401).send({msg:"unauthorised"})
-
-//     let deleteEmployee=await employeeModel.findByIdAndDelete({_id:employeeid})
-//     return res.status(200).send({status:true,message:"employee is delete successfully",data:deleteEmployee})
-
-// }
 
 const deleteEmployee = async function (req, res) {
   req.userId;
@@ -83,14 +78,14 @@ const deleteEmployee = async function (req, res) {
   if (!finduser)
     return res
       .status(404)
-      .send({ status: false, message: "user is not found" });
+      .send({ status: false, message: "User Not Found" });
   if (finduser.level === 1) {
     let employeeid = req.params.id;
     const findemployee = await employeeModel.findById(employeeid);
     if (!findemployee)
       return res
         .status(400)
-        .send({ status: false, message: "employee is not found" });
+        .send({ status: false, message: "Employee  Not Found" });
     // if(req.userId !==findemployee.userId)return res.status(401).send({msg:"unauthorised"})
 
     let deleteEmployee = await employeeModel.findByIdAndDelete({
@@ -100,7 +95,7 @@ const deleteEmployee = async function (req, res) {
       .status(200)
       .send({
         status: true,
-        message: "employee is delete successfully",
+        message: "Employee Deleted Successfully",
         data: deleteEmployee,
       });
   }else{
@@ -108,7 +103,7 @@ const deleteEmployee = async function (req, res) {
       .status(200)
       .send({
         status: false,
-        message: "unautrorized user",
+        message: "Unautrorized User",
         
       });
   }
