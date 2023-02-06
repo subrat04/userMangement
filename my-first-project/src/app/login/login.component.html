@@ -15,14 +15,14 @@
           <form [formGroup]="loginuser" style="margin-left: 7rem;">
             <div class="form-group  " style="margin-top: 5rem;">
                 <h1 >Login Form</h1>
-              <label> UserId</label>
+              <label style="margin-left: 6px;" >UserId:</label>
               <input type="text" class="form-control"   placeholder="Enter UserId" formControlName="userId">
               <div class="error" *ngIf="submitted && f.userId.errors">
                 <div class="text-danger" *ngIf="f.userId.errors['required']">userId is required</div>
             </div>
             </div>
             <div class="form-group field">
-              <label for="exampleInputPassword1">Password</label>
+              <label for="exampleInputPassword1" style="margin-left: 6px;">Password</label>
               <input type="password"  [type]="showPassword ? 'text':'password'" [(ngModel)]="password" autocomplete="off" fr class="form-control" placeholder="Enter password" formControlName="password"
             placeholder="Enter Password"
             required>
