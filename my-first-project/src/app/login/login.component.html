@@ -1,4 +1,4 @@
-
+<!-- 
 <div class="container mt-5 pt-5">
   <div class="row">
     <div class="col-md-4 offset-md-4 border border-2 rounded shadow p-5">
@@ -34,4 +34,50 @@
       </form>
     </div>
   </div>
-</div>
+</div> -->
+
+<!-- <section > -->
+  <div style="background-color: antiquewhite; width:100%; height: 100%;">
+    <div class="row mx-auto " >
+      <div class="col-xl-12 d-flex shadow border-2" style="border: 1px solid black; width: 70rem; margin-top: 5rem; margin-left:10rem ; background-color: white;">
+        <div class="col-xl-6" >
+          <img class="text-center"
+            style="width: 30rem"
+            src="../../assets/image2/Hays_Tech_General no BG 1000px.png"
+            alt=""
+            srcset=""
+          />
+        </div>
+        <div class="col-xl-5" style="border-left: 1px solid black;">
+          <form [formGroup]="loginuser" style="margin-left: 7rem;">
+            <div class="form-group  " style="margin-top: 5rem;">
+                <h1 >Login Form</h1>
+              <label> UserId</label>
+              <input type="text" class="form-control"   placeholder="Enter UserId" formControlName="userId">
+              <div class="error" *ngIf="submitted && f.userId.errors">
+                <div class="text-danger" *ngIf="f.userId.errors['required']">userId is required</div>
+            </div>
+            </div>
+            <div class="form-group field">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password"  [type]="showPassword ? 'text':'password'" [(ngModel)]="password" autocomplete="off" fr class="form-control" placeholder="Enter password" formControlName="password"
+            placeholder="Enter Password"
+            required>
+            <button (click)="showPassword = !showPassword" class="btn eye ">
+              <i class="fa " [ngClass]="{'fa-eye': !showPassword,'fa-eye-slash': showPassword}"></i>
+            </button>
+            <div class="error" *ngIf="submitted && f.password.errors">
+              <div class="text-danger" *ngIf="f.password.errors['required']">
+                password is required
+              </div>
+            </div>
+            </div>
+            <button  type="submit" class="btn btn-primary mt-2" [disabled]="!loginuser.valid" (click)="loginUsers()">Submit</button>
+            <button  type="submit" class="btn btn-primary mt-2 " style="margin-left: 1rem;" (click)="redirect()">Signup</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- </section> -->

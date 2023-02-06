@@ -134,3 +134,34 @@ h1 span{
 .card_text:hover{
     transform: scale(1.15); 
 }
+.allbrand {
+    padding-bottom: 7rem;
+  }
+  .brandImg {
+    margin-top: 4rem;
+  }
+  
+  .card_button{
+      width: 3.7rem;
+      height: 3.8rem;
+      /* background-color: #5785ae; */
+      background-color: #004684 
+  }
+  .details{
+      margin-top: 5rem;
+  }
+  .line>p{
+      margin-top: 2.4rem;
+      line-height: 1.7rem;
+      color: #5785ae;
+  }
+  
+  .card_buttons{
+      width: 3.7rem;
+      height: 3.8rem;
+      /* background-color: #5785ae; */
+      background-color: #004684 
+  }
+  .card_buttons:hover{
+      background-color: black;
+  }
