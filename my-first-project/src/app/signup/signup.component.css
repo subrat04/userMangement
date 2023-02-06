@@ -1,12 +1,12 @@
-.button{
-    margin-left: 20px;
+.button {
+  margin-left: 20px;
 }
 .field {
-    position: relative;
-  }
-  
-  .eye{
-      position: absolute;
-      right: 7px;
-     border: none;
-  }
+  position: relative;
+}
+
+.eye {
+  position: absolute;
+  right: 7px;
+  border: none;
+}
