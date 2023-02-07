@@ -1,0 +1,44 @@
+.bg-image{
+    height: 60%;
+    background-size: cover;
+}
+.part_img{
+    position: relative;
+    padding: 30px 30px 50px;
+}
+.img1{
+    position: initial;
+    width: 100%;
+}
+.img2{
+    position: absolute;
+    top:0;
+    left:0;
+    width:auto;
+    z-index: -1;
+}
+.img3{
+    top: auto;
+    bottom: 40px;
+    z-index: 2;
+}
+.img4{
+    left: auto;
+    right: 0;
+    top: auto;
+    bottom: 0;
+}
+.main-btn{
+    display: inline-block;
+    width: 150px;
+    background-color: #5785ae;
+    color: white;
+    letter-spacing: 1px;
+    border: 1px solid;
+    background-size: 200% 100%;
+    font-weight: 500;
+    font-weight: 14px;
+}
+.main-btn:hover{
+    background-color: black;
+}

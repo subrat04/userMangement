@@ -15,6 +15,7 @@ import { RegisterfamilyinfoComponent } from './registerfamilyinfo/registerfamily
 import { AlldetailuserComponent } from './alldetailuser/alldetailuser.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 
 
@@ -35,7 +36,10 @@ const routes: Routes = [
 },
 {
  
-    path:"userProfile",component:ProfileComponent
+  path:"userProfile",component:ProfileComponent
+},
+{
+  path:"aboutus",component:AboutusComponent
 },
 {
   path:"users",canActivate:[AuthguardGuard] ,component:UsersComponent

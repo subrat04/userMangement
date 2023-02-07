@@ -28,6 +28,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomebodyComponent } from './homebody/homebody.component';
 import { HomeheaderComponent } from './homeheader/homeheader.component';
 import { ProfileComponent } from './profile/profile.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
 
 // all packages import here 
 @NgModule({
@@ -49,6 +50,7 @@ import { ProfileComponent } from './profile/profile.component';
     HomebodyComponent,
     HomeheaderComponent,
     ProfileComponent,
+    AboutusComponent,
     
   ],
   imports: [
