@@ -1,5 +1,117 @@
-<app-navbar></app-navbar>
+<app-navbar class="fixed-top"></app-navbar>
 
-<div class="help">
+<!-- <div class="help">
     <h1>Users can contact for any help at eminenceinnovation@gmail.com</h1>
-</div>
+</div> -->
+<!-- <section class="banner_wrapper"> -->
+<div
+  class="bg-image"
+  style="background-image: url(../../assets/image/contact-us.jpg)"
+></div>
+<!-- </section> -->
+<section style="background-color: #f4f5f7">
+  <!-- <section style="background-color:;"> -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 d-flex">
+        <a routerLink="/home"><h5>Home:</h5></a>
+        <a><h5>Contact</h5></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="background-color: #f4f5f7;padding-bottom: 1rem;">
+  <div class="container">
+    <div class="row" style="margin-left: 10rem">
+      <div class="col-md-6 mt-5">
+        <div class="row">
+          <div
+            class="card card_hover"
+            style="width: 28rem; height: 5rem; background-color: #f4f9ff"
+          >
+            <div class="card-body">
+              <p class="fw-bold mt-3" style="font-size: 1rem; color: #005cea">
+                info@eminenceinnovation.com
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="card card_hover"
+            style="width: 28rem; height: 6rem; background-color: #f4f9ff"
+          >
+            <div class="card-body">
+              <p class="fw-bold mt-3" style="font-size: 1rem; color: #005cea">
+                +91-7982-611-413
+              </p>
+            </div>
+          </div>
+
+          <div class="card"
+            style="width: 28rem; height: 7rem; background-color: #f4f9ff;padding:0;"
+          >
+            <div class="card-body card_hover">
+              <p class="fw-bold" style="font-size: 1rem; cursor: pointer;color: #005cea">
+                Office no 402, 4th floor Northex Gditl tower, Plot no A-09
+                Netaji Subhash Place,Pitampura, Delhi-110034, India
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 mt-5">
+        <div class="card" style="width: 28rem; background-color: #f4f9ff">
+          <div class="card-body mt-5">
+            <div class="text-center ,">
+              <p style="font-size: 1.1rem; color: #0064eb ;">Get In Touch</p>
+              <h1 style="font-size: 2rem">
+                Need a better quote for our service?
+              </h1>
+            </div>
+            <input class="mb-3 input_change" placeholder="Enter Name" />
+
+            <input class="mb-3 input_change" placeholder="Enter Email" />
+
+            <input
+              class="mb-3 input_change"
+              placeholder="Enter Mobile Number"
+            />
+
+            <input
+              class="mb-3 input_change"
+              placeholder="Company/Oraganization"
+            />
+            <!-- <div class="form-group"> -->
+            <select id="inputState" class="form-control mb-3 input_change">
+              <option selected>Select Service</option>
+              <option>Managed It Service</option>
+              <option>It Project Mangement</option>
+              <option>Business Software</option>
+              <option>Cloud Servers</option>
+              <option>Website Design</option>
+              <option>Cyber Security</option>
+              <option>It Consulting</option>
+              <option>Digital Marketing</option>
+              <option>Increase Quality Traffic</option>
+            </select>
+            <!-- </div> -->
+            <textarea
+              class="mx-auto input_change "
+              id="w3review"
+              rows="4"
+              cols="50"
+              style="width: 100%; height: 6rem"
+              placeholder="Message.."
+            ></textarea>
+            <button class="main-btn p-3 shadow rounded" >
+                Explore More <i class="far fa-arrow-alt-circle-right"></i>
+              </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-footer></app-footer>

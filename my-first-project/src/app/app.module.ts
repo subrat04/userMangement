@@ -27,6 +27,7 @@ import { AlldetailuserComponent } from './alldetailuser/alldetailuser.component'
 import { FooterComponent } from './footer/footer.component';
 import { HomebodyComponent } from './homebody/homebody.component';
 import { HomeheaderComponent } from './homeheader/homeheader.component';
+import { ProfileComponent } from './profile/profile.component';
 
 // all packages import here 
 @NgModule({
@@ -47,6 +48,7 @@ import { HomeheaderComponent } from './homeheader/homeheader.component';
     FooterComponent,
     HomebodyComponent,
     HomeheaderComponent,
+    ProfileComponent,
     
   ],
   imports: [

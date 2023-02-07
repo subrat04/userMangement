@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiServiceService } from '../api-service.service';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
-import { IfStmt } from '@angular/compiler';
+
 
 @Component({
   selector: 'app-alldetailuser',

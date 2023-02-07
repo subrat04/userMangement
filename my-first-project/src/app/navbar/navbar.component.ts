@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent {
   level: any;
+  users:any
   constructor(private router:Router){}
   ngOnInit(): void {
    this.level = localStorage.getItem('level')
@@ -18,5 +19,7 @@ export class NavbarComponent {
     localStorage.removeItem("level")
     this.router.navigate([""])
   }
-
+  getuserinfo(id:any){
+    this.router.navigate(['/userProfile',id])
+  }
 }

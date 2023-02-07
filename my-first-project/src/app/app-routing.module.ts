@@ -14,6 +14,7 @@ import { AuthguardGuard } from './authguard.guard';
 import { RegisterfamilyinfoComponent } from './registerfamilyinfo/registerfamilyinfo.component';
 import { AlldetailuserComponent } from './alldetailuser/alldetailuser.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProfileComponent } from './profile/profile.component';
 
 
 
@@ -31,6 +32,10 @@ const routes: Routes = [
 },
 {
   path:"navbar",component:NavbarComponent
+},
+{
+ 
+    path:"userProfile",component:ProfileComponent
 },
 {
   path:"users",canActivate:[AuthguardGuard] ,component:UsersComponent

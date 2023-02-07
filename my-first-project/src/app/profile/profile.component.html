@@ -1,0 +1,119 @@
+<app-navbar></app-navbar>
+<section>
+    <div class="container mt-1" style="overflow-y: auto;" *ngFor="let users of users">
+      <div class="row mt-3 offset-md-1">
+        <!-- <div class=""> -->
+        <div class="col-md-5 mt-3 ">
+          <div class="card rounded shadow p-3"   style="width: 30rem">
+            <img
+              class="card-img-top"
+              src="../../assets/image/employee.jpg"
+              alt="Card image cap"
+            />
+            <div class="card-body">
+              <i><h1 class="card-title fw-bold">My Profile</h1></i>
+              <hr />
+              <div class="d-flex justify-content-between">
+                <p class="fw-bold" style="font-size: 1rem;">Name:<span style="color:firebrick">{{users.Name}}</span></p>
+                <p class="fw-bold" style="font-size: 1rem;">UserId:<span style="color:firebrick">{{users.userId}}</span></p>
+              </div>
+              <hr />
+              <p class="fw-bold" style="font-size: 1rem;">Email Id:<span style="color:firebrick">{{users.email}}</span></p>
+              <!-- <p>Address:{{users.userId.permanentAddress}}</p> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-md-7 mt-2">
+          <div class="col-md-6">
+            <div class="card rounded shadow" style="width: 30rem; ">
+              <div class="card-body " >
+                <i><h1 class="card-title fw-bold">Techincal Skill</h1></i>
+                <div class="mb-3">
+                  <label>javascript</label>
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-success"
+                      role="progressbar"
+                      style="width: 85%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <label>Angular</label>
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-info"
+                      role="progressbar"
+                      style="width: 75%"
+                    ></div>
+                  </div>
+                </div>
+                <div class="">
+                  <label>Node Js</label>
+                  <div class="progress">
+                    <div
+                      class="progress-bar bg-danger"
+                      role="progressbar"
+                      style="width: 100%"
+                    ></div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mt-2">
+            <div class="card rounded shadow" style="width: 30rem; ">
+              <div class="card-body">
+                <i><h1 class="card-title fw-bold">About Me</h1></i>
+                <hr>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit fugit repellat commodi, nisi magnam facilis tempora saepe deserunt ex ipsum eos ea culpa doloribus similique, fuga, magni corrupti alias id?
+                </p>
+                <hr>
+                <i><h2 class="fw-bold">Social Media Link</h2></i>
+                <div class="footer_logo">
+                  <a href="" class="me-4 text-reset" >
+                    <img
+                      class="footer_image"
+                      src="../../assets/image/facebook.png"
+                      target="blank"
+                    />
+                  </a>
+                  <a href="" class="me-4 text-reset">
+                    <img
+                      class="footer_image"
+                      src="../../assets/image/insta.png"
+                      target="blank"
+                    />
+                  </a>
+                  <a href="" class="me-4 text-reset">
+                    <img
+                      class="footer_image"
+                      src="../../assets/image/linkedin.png"
+                      target="blank"
+                    />
+                  </a>
+                  <a href="" class="me-4 text-reset">
+                    <img
+                      class="footer_image"
+                      src="../../assets/image/twitter.png"
+                      target="blank"
+                    />
+                  </a>
+                  <a href="" class="me-4 text-reset">
+                    <img
+                      class="footer_image"
+                      src="../../assets/image/pintrest.png"
+                      target="blank"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- </div> -->
+      </div>
+    </div>
+  </section>
