@@ -29,6 +29,8 @@ import { HomebodyComponent } from './homebody/homebody.component';
 import { HomeheaderComponent } from './homeheader/homeheader.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { ServicesComponent } from './services/services.component';
+import { CognizanceComponent } from './cognizance/cognizance.component';
 
 // all packages import here 
 @NgModule({
@@ -51,6 +53,8 @@ import { AboutusComponent } from './aboutus/aboutus.component';
     HomeheaderComponent,
     ProfileComponent,
     AboutusComponent,
+    ServicesComponent,
+    CognizanceComponent,
     
   ],
   imports: [

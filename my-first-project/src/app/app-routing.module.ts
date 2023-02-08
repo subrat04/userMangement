@@ -16,6 +16,8 @@ import { AlldetailuserComponent } from './alldetailuser/alldetailuser.component'
 import { FooterComponent } from './footer/footer.component';
 import { ProfileComponent } from './profile/profile.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { ServicesComponent } from './services/services.component';
+import { CognizanceComponent } from './cognizance/cognizance.component';
 
 
 
@@ -39,11 +41,15 @@ const routes: Routes = [
   path:"userProfile",component:ProfileComponent
 },
 {
+  path:"services",component:ServicesComponent
+},
+{
   path:"aboutus",component:AboutusComponent
 },
 {
   path:"users",canActivate:[AuthguardGuard] ,component:UsersComponent
 },
+
 {
   path:"updateUser/:id",canActivate:[AuthguardGuard],component:UpdateuserComponent 
 },
@@ -58,6 +64,9 @@ const routes: Routes = [
 },
 {
   path:"home",canActivate:[AuthguardGuard],component:HomeComponent 
+},
+{
+  path:"cognizance",component:CognizanceComponent
 },
 {
   path:"registerEmployee",canActivate:[AuthguardGuard],component:RegisteremployeeComponent
