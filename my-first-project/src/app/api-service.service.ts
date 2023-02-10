@@ -86,4 +86,8 @@ export class ApiServiceService {
  isLoggedIn(){
   return !!localStorage.getItem('token')
  }
+ contactus(payload:any,id:any){
+  const url=this.link +`/contact/${id}`
+  return this.http.post(url,payload)
+ }
 }

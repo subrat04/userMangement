@@ -13,6 +13,6 @@ ngOnInit(): void {
   
 }
 redirect(){
-this.route.navigate(["/help"])
+this.route.navigate(["/services"])
 }
 }

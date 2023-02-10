@@ -14,11 +14,11 @@
                   <!-- Content -->
                   <h5 class="fw-bold">Company</h5>
                   <ul class="mb-2">
-                    <li>Home</li>
-                    <li>About us</li>
-                    <li>Services</li>
-                    <li>cognizence</li>
-                    <li>Contact Us</li>
+                    <li (click)="home()">Home</li>
+                    <li (click)="aboutus()">About us</li>
+                    <li (click)="services()">Services</li>
+                    <li (click)="cognizence()">cognizence</li>
+                    <li (click)="contactus()">Contact Us</li>
                   </ul>
                 </div>
 
@@ -26,11 +26,11 @@
                   <!-- Links -->
                   <h5 class="fw-bold">Services</h5>
                   <ul class="mb-2">
-                    <li>Cloud Solutions</li>
-                    <li>UI/UX Design</li>
-                    <li>SaaS Development</li>
-                    <li>DevOps Service</li>
-                    <li>PHP Web Development</li>
+                    <li (click)="cloudsolution()">Cloud Solutions</li>
+                    <li (click)="uiuxdesigen()">UI/UX Design</li>
+                    <li (click)="sasdev()">SaaS Development</li>
+                    <li (click)="devopsservice()">DevOps Service</li>
+                    <li (click)="phpwebdev()">PHP Web Development</li>
                   </ul>
                 </div>
                 <!-- Grid column -->
@@ -40,11 +40,11 @@
                   <!-- Links -->
                   <h5 class="fw-bold">More Service</h5>
                   <ul class="mb-2">
-                    <li>Mobile App Development</li>
-                    <li>iOS App Development</li>
-                    <li>Android App Development</li>
-                    <li>Web Design</li>
-                    <li>Content Writing</li>
+                    <li (click)="mobileDev()">Mobile App Development</li>
+                    <li (click)="iosDev()">iOS App Development</li>
+                    <li (click)="androidDev()">Android App Development</li>
+                    <li (click)="webdesign()">Web Design</li>
+                    <li (click)="contentwriting()">Content Writing</li>
                   </ul>
                 </div>
                 <div class="col-md-2 col-lg-2 col-xl-3 mx-auto mb-4">
@@ -53,7 +53,7 @@
                   <ul class="mb-2">
                     <li>Email Us</li>
                     <li>Clients</li>
-                    <li>Message Us</li>
+                   <a routerLink="/help">Message Us</a>
                   </ul>
                 </div>
               </div>

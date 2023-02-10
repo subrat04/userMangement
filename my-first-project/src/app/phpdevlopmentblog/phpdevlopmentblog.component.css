@@ -1,0 +1,128 @@
+.part_image{
+    box-sizing: border-box;
+}
+.part_image>img{
+    height:400px;
+    width: 100%;
+}
+/* .blog-table{
+    background-color: #1b6ae7;
+    /* border: 1px solid #cccccc; */
+    /* padding: 5px 10px; */
+/* } */
+.tgs{
+    color: #72839a;
+    font-weight: 500;
+    display: inline-block;
+    border: 2px solid #1b6ae7
+}
+.tgs>a{
+    padding: 5px;
+}
+.icon{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    font-size: 14px;
+    color: #fff;
+    background: #005cea;
+}
+.paragraph{
+    color: #72839a;
+    font-weight: 500;
+    width: auto!important;
+    line-height: 28px;
+}
+strong{
+    font-weight: bolder;
+}
+
+.side-blog{
+    overflow: scroll;
+    height: 600px;
+}
+.sidesec{
+    margin-right: -30px
+}
+.recent{
+    display: inline-grid;
+}
+.title{
+    font-size: 25px;
+   font-weight: 700;
+color: #314259;
+     margin: -5px 0 23px;
+}
+.side{
+    display: inline-block;
+    border: 1px solid #e0e1e1;
+    padding: 0 8px;
+    border-radius: 5px;
+    color: #72839a;
+    font-weight: 500;
+    height: 50px;
+    line-height: 50px;
+    margin-right: 6px;
+    margin-bottom: 10px;
+}
+
+.phone_num{
+    display: block;
+    font-size: 45px;
+    font-weight: 800;
+    color: #222;
+    color: #fff;
+    margin-bottom: 17px;
+
+}
+.main-button{
+    background: #ffa200;
+    border: 1px solid #ffa200;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.main-button:hover{
+    background-color: #004586;
+}
+
+.main-btn{
+    display: inline-block;
+    width: 150px;
+    background-color: white;
+    color: black;
+    letter-spacing: 1px;
+    border: 1px solid;
+    background-size: 200% 100%;
+    font-weight: 500;
+    font-weight: 14px;
+}
+.main-btn:hover{
+    background-color: black;
+    color: white;
+}
+
+.headers{
+    text-align: center !important;
+}
+.subnav{
+    width:100%;
+    height:50px;
+}
+.subnav .sb a{
+    float:left;
+    margin-right:5px;
+}
+.sb{
+    width:25%;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    height:auto;
+    overflow: hidden;
+
+}

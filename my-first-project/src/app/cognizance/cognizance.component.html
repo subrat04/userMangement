@@ -32,6 +32,7 @@
                 style="height: 15rem"
                 src="../../assets/image/safecyber.jpg"
                 alt="Card image cap"
+                (click)="redirect()"
               />
               <hr />
               <div class="card-body">
@@ -54,6 +55,7 @@
                 style="height: 15rem"
                 src="../../assets/image/admin.png"
                 alt="Card image cap"
+                (click)="mobileblog()"
               />
               <hr />
               <div class="card-body">
@@ -77,6 +79,7 @@
                 style="height: 15rem"
                 src="../../assets/image/php.jpg"
                 alt="Card image cap"
+                (click)="phpblog()"
               />
               <hr />
               <div class="card-body">
@@ -105,6 +108,7 @@
                 style="height: 15rem"
                 src="../../assets/image/image2.jpg"
                 alt="Card image cap"
+                (click)="customsoftwaredevlopment()"
               />
               <hr />
               <div class="card-body">
@@ -128,6 +132,7 @@
                 style="height: 15rem"
                 src="../../assets/image/image3.jpg"
                 alt="Card image cap"
+                (click)="phpdevlopment()"
               />
               <hr />
               <div class="card-body">
@@ -151,6 +156,7 @@
                 style="height: 15rem"
                 src="../../assets/image/image4.jpg"
                 alt="Card image cap"
+                (click)="saasdevlopment()"
               />
               <hr />
               <div class="card-body">
@@ -174,19 +180,19 @@
       <div class="row " style="padding: 10rem;">
         <div class="col-md-6 mt-5 ">
           <h1 class="phone_num">+91-7982-611-413</h1>
-          <p class="description">
+          <p class="description" style="color:white">
             Without the hassles of hiring, our expert team delivers dream-team
             results.
           </p>
           <div class="mt-5">
-            <button class="main-btn p-3 shadow rounded">
+            <button class="main-btn p-3 shadow rounded" (click)="redirectd()">
               Contact Now <i class="far fa-arrow-alt-circle-right"></i>
             </button>
           </div>
         </div>
         <div class="col-md-6">
           <div class="">
-              <button class="main-button p-3 shadow rounded" style="margin-bottom: 2rem;">
+              <button class="main-button p-3 shadow rounded" style="margin-bottom: 2rem;" (click)="redirectd()">
                 Call For Advice Now
               </button>
               <h2 style="font-size: 45px;line-height: 55px; font-weight: 800; color: #fff; margin: 0;">To make requests for further information, contact us via our social channels.</h2>

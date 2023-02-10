@@ -31,6 +31,24 @@ import { ProfileComponent } from './profile/profile.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ServicesComponent } from './services/services.component';
 import { CognizanceComponent } from './cognizance/cognizance.component';
+import { ChatwithusComponent } from './chatwithus/chatwithus.component';
+import { CyberspaceComponent } from './cyberspace/cyberspace.component';
+import { MobileappsComponent } from './mobileapps/mobileapps.component';
+import { PhpblogComponent } from './phpblog/phpblog.component';
+import { CustomsoftwaredevComponent } from './customsoftwaredev/customsoftwaredev.component';
+import { PhpdevlopmentblogComponent } from './phpdevlopmentblog/phpdevlopmentblog.component';
+import { SasdevlopmemtblogComponent } from './sasdevlopmemtblog/sasdevlopmemtblog.component';
+import { AndroiddevlopmentComponent } from './androiddevlopment/androiddevlopment.component';
+import { MobiledevlopmentComponent } from './mobiledevlopment/mobiledevlopment.component';
+import { IosDevlopmentComponent } from './ios-devlopment/ios-devlopment.component';
+import { WebdesigenComponent } from './webdesigen/webdesigen.component';
+import { ContentwritingComponent } from './contentwriting/contentwriting.component';
+import { DevopsserviceComponent } from './devopsservice/devopsservice.component';
+import { PhpdevComponent } from './phpdev/phpdev.component';
+import { SaasdevlopmentComponent } from './saasdevlopment/saasdevlopment.component';
+import { UiuxdesigenComponent } from './uiuxdesigen/uiuxdesigen.component';
+import { CloudsolutionComponent } from './cloudsolution/cloudsolution.component';
+// import { WebdesigendevComponent } from './webdesigendev/webdesigendev.component';
 
 // all packages import here 
 @NgModule({
@@ -55,6 +73,23 @@ import { CognizanceComponent } from './cognizance/cognizance.component';
     AboutusComponent,
     ServicesComponent,
     CognizanceComponent,
+    ChatwithusComponent,
+    CyberspaceComponent,
+    MobileappsComponent,
+    PhpblogComponent,
+    CustomsoftwaredevComponent,
+    PhpdevlopmentblogComponent,
+    SasdevlopmemtblogComponent,
+    AndroiddevlopmentComponent,
+    MobiledevlopmentComponent,
+    IosDevlopmentComponent,
+    WebdesigenComponent,
+    ContentwritingComponent,
+    DevopsserviceComponent,
+    PhpdevComponent,
+    SaasdevlopmentComponent,
+    UiuxdesigenComponent,
+    CloudsolutionComponent
     
   ],
   imports: [
