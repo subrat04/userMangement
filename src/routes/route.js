@@ -4,6 +4,7 @@ const {createEmployee, getEmployee, updateEmployee, deleteEmployee}=require("../
 const { decode } = require("jsonwebtoken")
 const { authenticate } = require("../middlewire/auth")
 const { createuserInfo, getUserInfo } = require("../controllers/userInfoController")
+const { createMeassge } = require("../controllers/contactController")
 
 let router=express.Router()
 
@@ -13,7 +14,7 @@ router.get("/getUser",getUser)
 router.put("/updateUser/:id",updateuser)
 router.delete("/deleteUser/:id",deleteUser)
 
-
+router.post("/contact",createMeassge)
 router.post("/createUserInfo",createuserInfo)
 router.get("/getuserInfo",getUserInfo)
 

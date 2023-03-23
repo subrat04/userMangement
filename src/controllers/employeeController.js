@@ -1,6 +1,5 @@
 const userModel = require("../models/userModel.js");
 const employeeModel = require("../models/employeeModel.js");
-
 const createEmployee = async (req, res) => {
 try {
   let requestbody = req.body;
